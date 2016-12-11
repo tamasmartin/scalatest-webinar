@@ -14,8 +14,6 @@ libraryDependencies ++= Seq(
   "org.seleniumhq.selenium" % "selenium-java" % "2.46.0",
   "org.seleniumhq.selenium" % "selenium-firefox-driver" % "2.46.0",
   "org.scalamock" %% "scalamock-scalatest-support" % "3.2" % "test",
-  //"org.mockito" % "mockito-all" % "1.10.19",
-  //"org.easymock" % "easymock" % "3.3.1",
   "io.github.bonigarcia" % "webdrivermanager" % "1.5.0" % "test",
   "org.scalacheck" %% "scalacheck" % "1.12.0" % "test"
 )

@@ -1,9 +1,9 @@
 package com.epam.app.services
 
-import com.epam.app.dao.{LoginDaoImp}
+import com.epam.app.dao.{LoginDao}
 import com.epam.app.domain.User
 
-class LoginService(dao: LoginDaoImp) {
+class LoginService(dao: LoginDao) {
 
   def login(name: String, password: String): Option[User] = {
 

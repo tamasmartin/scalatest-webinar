@@ -68,6 +68,9 @@ class CalculatorImp extends Calculator {
   }
 }
 
-object CalculatorImp{
+/**
+  * Companion object
+  */
+object CalculatorImp {
   def apply(): CalculatorImp = new CalculatorImp()
 }
