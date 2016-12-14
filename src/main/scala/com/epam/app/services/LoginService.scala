@@ -3,19 +3,25 @@ package com.epam.app.services
 import com.epam.app.dao.{LoginDao}
 import com.epam.app.domain.User
 
-class LoginService(dao: LoginDao) {
+class LoginService(loginDao: LoginDao) {
 
   def login(name: String, password: String): Option[User] = {
 
-    dao.findUser(name: String, password: String) match {
+    loginDao.findUser(name: String, password: String) match {
       case true => {
-        dao.writeLoginAttempt(name, true)
+        loginDao.writeLoginAttempt(name, true)
         Some(User(name))
       }
       case false => {
-        dao.writeLoginAttempt(name, false)
+        loginDao.writeLoginAttempt(name, false)
         None
       }
     }
   }
+}
+
+object LoginService {
+
+  def apply(loginDao: LoginDao): LoginService = new LoginService(loginDao)
+
 }
