@@ -20,5 +20,4 @@ libraryDependencies ++= Seq(
 
 )
 
-
 testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "-h", "target/html-report"/*, "-C", "com.epam.reportportal.scalatest.RPReporter"*/)
